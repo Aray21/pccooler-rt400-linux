@@ -1,6 +1,8 @@
 # PCCOOLER RT400 Linux Temperature Monitor
 
-PCCOOLER's software for the RT400 Digital only runs on Windows. This lightweight Linux background service reads your CPU temperature from `hwmon` and sends it directly to the RT400 display over USB.
+PCCOOLER's official software for the RT400 Digital only runs on Windows. This lightweight Linux background service reads your CPU temperature from `hwmon` and sends it directly to the RT400 display over USB.
+
+> Unofficial project, not affiliated with PCCOOLER / CPS.
 
 ## Features
 
@@ -12,14 +14,39 @@ PCCOOLER's software for the RT400 Digital only runs on Windows. This lightweight
 - Supports temperatures from 0°C to 999°C
 - Lightweight and low CPU usage
 
+## Official software
+
+The official Windows app for these coolers is **CPS-Digital**, available from the PCCOOLER software page:
+
+http://www.cpspccooler.com/software/
+
+This project replaces it on Linux.
+
 ## Supported devices
 
 | Device | Status |
 |---|---|
 | PCCOOLER RT400 Digital | Tested |
-| Other PCCOOLER digital-display models | Untested, reports welcome |
 
-Own a similar model? Run `lsusb`, then open an issue with your USB ID and whether it works.
+> **Note:** the RT400's controller shows up in `lsusb` as
+> `1a2c:444d China Resource Semico Co., Ltd USB Gaming Keyboard`.
+> The name is misleading, but that is the cooler's display controller.
+
+### Possibly compatible (untested)
+
+These models use the same official app (CPS-Digital) as the RT400, so they may work too, but nobody has tested them yet:
+
+- RT500 Digital
+- RT500 Digital ARGB
+- RT620 Digital
+- DA360 Pro ARGB Digital
+- DA240 Pro ARGB Digital
+- DC360 ARGB Digital
+- DS360 Pro Digital
+- GT360 ARGB Digital
+- Digital Cell
+
+Own one of these? Run `lsusb`, then open an issue with your model, your USB ID and whether it works. Working models will be moved to the tested list.
 
 ## Requirements
 
